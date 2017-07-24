@@ -76,7 +76,7 @@ public class GenericDaoImpl<T extends Serializable, ID extends Number> implement
 
     @Override
     public Pagination<T> queryAll(int currentPage) {
-        return getPagination("queryAll",null,currentPage) ;
+        return getPagination(getStatement("queryAll"),null,currentPage) ;
     }
 
     private Pagination<T> getPagination(String statement,Object parameter,int currentPage){
@@ -85,6 +85,6 @@ public class GenericDaoImpl<T extends Serializable, ID extends Number> implement
         int totalPages = (int) Math.ceil(totalRows / (double)pageSize);
         RowBounds rowBounds = new RowBounds(pageSize * (currentPage - 1), pageSize);
         List<T> list = sqlSession.selectList(statement,parameter,rowBounds);
-        return new Pagination<T>(list,statement,pageSize,totalRows,totalPages,currentPage);
+        return new Pagination<>(list,statement,pageSize,totalRows,totalPages,currentPage);
     }
 }
