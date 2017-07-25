@@ -15,8 +15,6 @@ import java.util.Scanner;
 
 /**
  * Created by AnLu on
- * 2017/7/23 22:15.
- * ssm
  */
 class ComponentGenerator {
 

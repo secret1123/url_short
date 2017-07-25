@@ -9,8 +9,6 @@ import javax.servlet.http.HttpSession;
 
 /**
  * Created by AnLu on
- * 2017/7/23 21:26.
- * ssm
  */
 public class BaseController {
 

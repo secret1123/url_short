@@ -8,8 +8,6 @@ import java.io.Serializable;
 
 /**
  * Created by AnLu on
- * 2017/7/23 22:08.
- * ssm
  */
 public abstract class GenericServiceImpl<T extends Serializable,ID extends Number> implements GenericService<T,ID> {
 
@@ -35,6 +33,11 @@ public abstract class GenericServiceImpl<T extends Serializable,ID extends Numbe
     @Override
     public void modify(T t) {
         genericDao.modify(t);
+    }
+
+    @Override
+    public void modify(String statement,Object parameter){
+        genericDao.modify(statement, parameter);
     }
 
     @Override

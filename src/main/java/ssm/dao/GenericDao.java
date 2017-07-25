@@ -6,8 +6,6 @@ import java.io.Serializable;
 
 /**
  * Created by AnLu on
- * 2017/7/23 21:27.
- * ssm
  */
 public interface GenericDao<T extends Serializable,ID extends Number> {
 

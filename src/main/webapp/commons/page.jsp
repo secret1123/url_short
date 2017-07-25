@@ -1,8 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
   User: anlu
-  Date: 2017/7/24
-  Time: 08:38
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page pageEncoding="UTF-8" %>

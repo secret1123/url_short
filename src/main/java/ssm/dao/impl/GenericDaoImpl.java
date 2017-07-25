@@ -14,8 +14,6 @@ import java.util.List;
 
 /**
  * Created by AnLu on
- * 2017/7/23 21:38.
- * ssm
  */
 public class GenericDaoImpl<T extends Serializable, ID extends Number> implements GenericDao<T, ID> {
 
