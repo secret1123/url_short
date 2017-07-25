@@ -1,12 +1,12 @@
-package ssm.dao.impl;
+package mw.dao.impl;
 
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
-import ssm.dao.GenericDao;
-import ssm.util.Constant;
-import ssm.util.Pagination;
+import mw.dao.GenericDao;
+import mw.util.Constant;
+import mw.util.Pagination;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;

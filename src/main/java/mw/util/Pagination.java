@@ -1,4 +1,4 @@
-package ssm.util;
+package mw.util;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
