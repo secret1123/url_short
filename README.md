@@ -27,11 +27,11 @@
 11. Edit web-servlet.xml
 - mvc:annotation-driven
 - context:component-scan
-  - mw.controller
-  - mw.dao.impl
-  - mw.service.impl
-12. Create mw.controller.BaseController class
-13. Create mw.model.BaseModel class
+  - demo.controller
+  - demo.dao.impl
+  - demo.service.impl
+12. Create demo.controller.BaseController class
+13. Create demo.model.BaseModel class
 14. Create commons/inc.jsp
 15. Create webapp/assets directory
 16. Create util.Constant interface
@@ -58,4 +58,4 @@
   - add.ftl
   - list.ftl
   - edit.ftl
-26. Create mw.util.ComponentGenerator class
+26. Create demo.util.ComponentGenerator class

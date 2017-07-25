@@ -1,6 +1,6 @@
-package mw.service;
+package demo.service;
 
-import mw.util.Pagination;
+import demo.util.Pagination;
 
 import java.io.Serializable;
 

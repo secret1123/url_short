@@ -1,4 +1,4 @@
-package mw.util;
+package demo.util;
 
 /**
  * Created by AnLu on

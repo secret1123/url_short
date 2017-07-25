@@ -1,4 +1,4 @@
-package mw.controller;
+package demo.controller;
 
 import org.springframework.web.bind.annotation.ModelAttribute;
 

@@ -1,4 +1,4 @@
-package mw.util;
+package demo.util;
 
 import freemarker.template.Template;
 import org.springframework.context.ApplicationContext;
@@ -19,8 +19,8 @@ import java.util.Scanner;
 class ComponentGenerator {
 
     // Configuration
-    private static final String PACKAGE = "mw";
-    private static final String DATABASE = "db_mw";
+    private static final String PACKAGE = "demo";
+    private static final String DATABASE = "db_";
 
     private static final String CODE_PATH = "src/main/java/";
     private static final String PAGE_PATH = "src/main/webapp/";

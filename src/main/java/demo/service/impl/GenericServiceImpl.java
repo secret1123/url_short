@@ -1,8 +1,8 @@
-package mw.service.impl;
+package demo.service.impl;
 
-import mw.dao.GenericDao;
-import mw.service.GenericService;
-import mw.util.Pagination;
+import demo.dao.GenericDao;
+import demo.service.GenericService;
+import demo.util.Pagination;
 
 import java.io.Serializable;
 

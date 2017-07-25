@@ -1,6 +1,6 @@
-package mw.dao;
+package demo.dao;
 
-import mw.util.Pagination;
+import demo.util.Pagination;
 
 import java.io.Serializable;
 

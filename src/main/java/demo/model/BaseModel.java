@@ -1,4 +1,4 @@
-package mw.model;
+package demo.model;
 
 import java.io.Serializable;
 
