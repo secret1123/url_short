@@ -1,4 +1,4 @@
-package ssm.util;
+package mw.util;
 
 /**
  * Created by AnLu on
