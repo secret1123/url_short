@@ -1,6 +1,6 @@
-package demo.service;
+package url.service;
 
-import demo.util.Pagination;
+import url.util.Pagination;
 
 import java.io.Serializable;
 import java.util.List;

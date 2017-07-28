@@ -7,7 +7,7 @@
 
     <mvc:annotation-driven/>
 
-    <context:component-scan base-package="demo.controller"/>
-    <context:component-scan base-package="demo.dao.impl"/>
-    <context:component-scan base-package="demo.service.impl"/>
+    <context:component-scan base-package="url.controller"/>
+    <context:component-scan base-package="url.dao.impl"/>
+    <context:component-scan base-package="url.service.impl"/>
 </beans>

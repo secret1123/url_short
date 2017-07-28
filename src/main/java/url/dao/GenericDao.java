@@ -1,6 +1,6 @@
-package demo.dao;
+package url.dao;
 
-import demo.util.Pagination;
+import url.util.Pagination;
 
 import java.io.Serializable;
 import java.util.List;

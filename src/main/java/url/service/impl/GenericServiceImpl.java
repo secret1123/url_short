@@ -1,8 +1,8 @@
-package demo.service.impl;
+package url.service.impl;
 
-import demo.dao.GenericDao;
-import demo.service.GenericService;
-import demo.util.Pagination;
+import url.dao.GenericDao;
+import url.service.GenericService;
+import url.util.Pagination;
 
 import java.io.Serializable;
 import java.util.List;

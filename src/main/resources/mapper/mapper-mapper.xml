@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper">
+    <insert id="create" parameterType="mapper" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO db_url.mapper (
+    original, 
+    creation
+        )
+        VALUES (
+    #{original}, 
+    #{creation}
+        );
+    </insert>
+    <delete id="remove">
+        DELETE FROM db_url.mapper
+        WHERE mapper.id = #{id}
+    </delete>
+    <update id="modify">
+        UPDATE db_url.mapper
+        SET
+    original = #{original}, 
+    creation = #{creation}
+        WHERE mapper.id = #{id}
+    </update>
+    <select id="queryAll" resultType="mapper">
+        SELECT *
+        FROM db_url.mapper
+        ORDER BY id
+    </select>
+    <select id="queryById" resultType="mapper">
+        SELECT *
+        FROM db_url.mapper
+        WHERE mapper.id = #{id}
+    </select>
+</mapper>

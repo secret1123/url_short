@@ -1,4 +1,4 @@
-package demo.util;
+package url.util;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

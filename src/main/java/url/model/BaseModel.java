@@ -1,4 +1,4 @@
-package demo.model;
+package url.model;
 
 import java.io.Serializable;
 

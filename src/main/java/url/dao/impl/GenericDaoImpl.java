@@ -1,12 +1,12 @@
-package demo.dao.impl;
+package url.dao.impl;
 
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
-import demo.dao.GenericDao;
-import demo.util.Constant;
-import demo.util.Pagination;
+import url.dao.GenericDao;
+import url.util.Constant;
+import url.util.Pagination;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;

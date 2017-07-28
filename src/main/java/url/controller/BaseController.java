@@ -1,4 +1,4 @@
-package demo.controller;
+package url.controller;
 
 import org.springframework.web.bind.annotation.ModelAttribute;
 

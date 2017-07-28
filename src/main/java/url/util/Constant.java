@@ -1,4 +1,4 @@
-package demo.util;
+package url.util;
 
 /**
  * Created by AnLu on
