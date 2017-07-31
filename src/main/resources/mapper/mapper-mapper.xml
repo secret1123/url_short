@@ -6,33 +6,22 @@
 <mapper namespace="mapper">
     <insert id="create" parameterType="mapper" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO db_url.mapper (
-    original, 
-    creation
+            original,
+            creation
         )
         VALUES (
-    #{original}, 
-    #{creation}
+            #{original},
+            #{creation}
         );
     </insert>
-    <delete id="remove">
-        DELETE FROM db_url.mapper
-        WHERE mapper.id = #{id}
-    </delete>
-    <update id="modify">
-        UPDATE db_url.mapper
-        SET
-    original = #{original}, 
-    creation = #{creation}
-        WHERE mapper.id = #{id}
-    </update>
-    <select id="queryAll" resultType="mapper">
-        SELECT *
-        FROM db_url.mapper
-        ORDER BY id
+    <select id="queryMapperByCreation" parameterType="String" resultType="mapper">
+        select *
+        from db_url.mapper
+        WHERE creation = #{creation}
     </select>
-    <select id="queryById" resultType="mapper">
-        SELECT *
-        FROM db_url.mapper
-        WHERE mapper.id = #{id}
+    <select id="getMapperByOriginal" parameterType="String" resultType="mapper">
+        select *
+        from db_url.mapper
+        WHERE original = #{original}
     </select>
 </mapper>

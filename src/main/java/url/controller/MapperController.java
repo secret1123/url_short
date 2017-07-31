@@ -2,54 +2,38 @@ package url.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import url.model.Mapper;
 import url.service.MapperService;
 
+import java.io.IOException;
+import java.util.Map;
+
+
 @Controller
-@RequestMapping("mapper")
 public class MapperController extends BaseController {
 
-private final MapperService mapperService;
+    private final MapperService mapperService;
 
-@Autowired
-public MapperController(MapperService mapperService) {
-this.mapperService = mapperService;
-}
+    @Autowired
+    public MapperController(MapperService mapperService) {
+        this.mapperService = mapperService;
+    }
 
-@RequestMapping("create")
-private String create(Mapper mapper) {
-mapperService.create(mapper);
-return "redirect:/mapper/queryAll";
-}
+    @RequestMapping(method = RequestMethod.GET)
+    private void redirect() throws IOException {
+        String creation = request.getRequestURI().substring(1);
+        Mapper mapper = mapperService.queryOne("queryMapperByCreation",creation);
+        response.sendRedirect(mapper.getOriginal());
+    }
 
-@RequestMapping("remove/{id}")
-private String remove(@PathVariable("id") Long id) {
-mapperService.remove(id);
-return "redirect:/mapper/queryAll";
-}
-
-@RequestMapping("modify")
-private String modify(Mapper mapper) {
-mapperService.modify(mapper);
-return "redirect:/mapper/queryAll";
-}
-
-@RequestMapping("queryAll/{page}")
-private String queryAll(@PathVariable int page) {
-session.setAttribute("pagination", mapperService.queryAll(page));
-return "redirect:/mapper/list.jsp";
-}
-
-@RequestMapping("queryAll")
-private String queryAll() {
-return queryAll(1);
-}
-
-@RequestMapping("queryById/{id}")
-private String queryById(@PathVariable("id") Long id) {
-session.setAttribute("mapper", mapperService.queryById(id));
-return "redirect:/mapper/edit.jsp";
-}
+    @RequestMapping(value = "create",method = RequestMethod.POST)
+    private String createMapper(Mapper mapper) {
+        String path = application.getRealPath("/") + "assets/qrcode/";
+        Map<String,Object> map = mapperService.createMapper(mapper,path);
+        session.setAttribute("mapper",map.get("mapper"));
+        session.setAttribute("mapper", mapper);
+        return "redirect:/default.jsp";
+    }
 }

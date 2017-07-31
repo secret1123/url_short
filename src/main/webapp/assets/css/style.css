@@ -1,0 +1,24 @@
+body {
+    background: url("../img/url.jpg");
+}
+
+#original-wrapper.mdl-textfield {
+    width: 100%;
+}
+
+#creation-wrapper.mdl-textfield {
+    width: 50%;
+}
+
+.mdl-textfield {
+    width: 100%;
+}
+
+#creation-wrapper.mdl-textfield--floating-label {
+    width: 50%;
+}
+
+#original {
+    word-wrap: break-word;
+    white-space: normal;
+}
