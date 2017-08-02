@@ -12,7 +12,7 @@ CREATE TABLE db_url.mapper (
   COMMENT '原链-短链 映射表';
 
 
-TRUNCATE TABLE db_url.mapper;
+# TRUNCATE TABLE db_url.mapper;
 
 SELECT *
 FROM db_url.mapper;
